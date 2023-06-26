@@ -1,0 +1,354 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  position: relative;
+}
+
+body {
+  overflow-y: auto;
+  min-height: 100vh;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+footer {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 16px 0px;
+  color: #999;
+  vertical-align: bottom;
+  margin-top: 40px;
+  text-align: center;
+  /* width: 100%; */
+  /* height: 2.5rem;   */
+}
+
+.banner {
+  height: 500px;
+  width: 100%;
+  background: #999;
+  margin: 20px 0px;
+}
+
+.content {
+  padding: 20px 0px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+/* ================================== */
+/* Layout page CSS */
+/* ================================== */
+#grid{
+  width: 100%;
+}
+#grid1{
+  width: 100%;
+  margin: 0%;
+}
+@media only screen and (min-width: 400x) {
+  /* For desktops phones: */
+  #grid {
+    margin-left: 5%;
+  }
+}
+.tileContainer{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.tile {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0.5em;
+  padding-left: 0%;
+  padding-right: 0%;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+.tile img {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5em;
+  transition: all 0.5s ease;
+}
+.tile img:hover {
+  /* TODO: MODULE_CARDS */
+  /* 1. Fill in the required properties. */
+  filter: brightness(50%);
+  transform: scale(110%);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+/* Hint: Notice the position:absolute and z-index properties. */
+/* Think about how those in relation to the existing "tile" classes. */
+.tile-text {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/hero.jpg");
+
+  /* TODO: MODULE_LAYOUT */
+  /* 1. Set a specific height. */
+  height: 25em;
+  /* 2. Position and center the image to scale nicely on all screens. */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-subheading {
+  font-size: 24px;
+  font-weight: 100;
+}
+.hero-input {
+  width: 80%;
+  height: 50px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.nav-link {
+  margin-right: 36px;
+}
+/* #navbarSupportedContent{
+  width: 100%;
+} */
+#rightAlign{
+  width: 100%;
+}
+#heroHeader{
+  font-size: 45px;
+}
+#input{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+/* ================================== */
+/* Adventures grid page CSS */
+/* ================================== */
+.content h1, .content h3{
+  padding-left: 10px;
+}
+.adventure-card {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  margin-bottom: 0.5em;
+  
+}
+.advCard {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.adventure-card img {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  height: 12rem;
+  background-color: black;
+  
+}
+@media only screen and (min-width: 1200px) {
+  /* For desktops phones: */
+  .advCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .adventure-card img {
+    /* TODO: MODULE_ADVENTURES_GRID */
+    /* 1. Fill in the required properties. */
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    height: 14rem;
+  }
+}
+
+.adventure-card img:hover {
+  /* TODO: MODULE_ADVENTURES_GRID */
+  /* 1. Fill in the required properties. */
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+/* ================================== */
+/* Adventure details page CSS */
+/* ================================== */
+.leftColumn{
+  width: auto;
+  border: solid 0.1em rgb(238, 236, 236);
+}
+.rightColumn{
+  width: auto;
+}
+
+.advDetailsPage {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.advImages {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1em;
+  
+}
+.rightImages{
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+}
+.leftImage img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.2em;
+}
+.rightImagesImg{
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  border-radius: 0.2em;
+  
+}
+.adventure-card-image:hover {
+  /* TODO: MODULE_ADVENTURE_DETAILS */
+  /* 1. Fill in the required properties. */
+}
+.leftImage img:hover{
+  filter: brightness(50%);
+}
+.rightImagesImg:hover{
+  filter: brightness(50%);
+}
+.headerAndCaption{
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid 0.1em rgb(238, 236, 236);
+}
+.content{
+  padding: 1em;
+}
+.caption{
+  margin-bottom: 0em;
+  color: rgb(162, 161, 161);
+}
+.rightColumn{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  margin-top: 1em;
+  border: solid 0.1em rgb(238, 236, 236);
+}
+.soldOut{
+  padding-bottom: 0.5em;
+  border-bottom: solid 0.1em rgb(238, 236, 236);
+}
+.belowSoldOut{
+  padding-top: 1em;
+}
+.exploreLink{
+  display: inline;
+  color: gold;
+}
+.exploreLinkAnchor{
+  display: inline;
+}
+@media only screen and (min-width: 1200px) {
+  /* For desktops phones: */
+  .advImages {
+    height: 30em;
+  }
+  .advDetailsPage {
+    /* TODO: MODULE_ADVENTURE_DETAILS */
+    /* 1. Fill in the required properties. */
+    display: flex;
+    flex-direction: row;
+    
+  
+  }
+  .rightColumn{
+    width: 30%;
+    height: 10em;
+    padding: 1em;
+    margin-left: 1em;
+    margin-top: 0em;
+    border: solid 0.1em rgb(238, 236, 236);
+  }
+  .leftImage{
+    width: 70%;
+  }
+  .rightImages{
+    
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 25%;
+    min-height: 100%;
+    font-size: 16px;
+    justify-content: space-between;
+
+  }
+  .leftColumn{
+    width: 70%;
+  }
+  .rightColumn{
+    position: sticky;
+    top: 2em;
+  }
+
+}
+.experience-content ul li {
+  margin-left: 16px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktops phones: */
+  #reservation {
+    width: 400px;
+    position: fixed;
+  }
+}
